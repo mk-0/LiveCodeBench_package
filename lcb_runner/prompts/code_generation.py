@@ -1,3 +1,4 @@
+from pathlib import Path
 import json
 
 try:
@@ -166,10 +167,11 @@ def get_deepseek_r1_question_template_answer(question: CodeGenerationProblem):
     return prompt
 
 
-with open("lcb_runner/prompts/few_shot_examples/generation/func.json") as f:
+_prompts_dir = Path(__file__).parent
+with open(_prompts_dir / "few_shot_examples/generation/func.json") as f:
     func = json.load(f)
 
-with open("lcb_runner/prompts/few_shot_examples/generation/stdin.json") as f:
+with open(_prompts_dir / "few_shot_examples/generation/stdin.json") as f:
     stdin = json.load(f)
 
 
