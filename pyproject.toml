@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["lcb_runner"]
+packages = {find = {}}
 
 [build-system]
 requires = ["setuptools>=61.0"]
